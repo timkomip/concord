@@ -1,0 +1,26 @@
+Models
+	User
+	Friendship
+	Post
+
+Controllers
+	Users
+		new
+		create
+	Friendships
+	Posts
+		index
+		new
+		create
+		destroy
+		update
+	Session
+		new
+		create
+		destroy
+
+Views
+	login
+	signup
+	wall (user's info and user's posts)
+	feed (a mix of user posts and friends posts)
