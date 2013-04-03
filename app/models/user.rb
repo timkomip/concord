@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email
 
   has_many :posts, :dependent => :destroy
+  has_many :friendships
+  has_many :friends, :through => :friendships
 
   def self.authenticate(email, password)
   	user = find_by_email(email)
