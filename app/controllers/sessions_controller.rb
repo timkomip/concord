@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  # GET /log_in
   def new
   end
 
@@ -13,8 +14,9 @@ class SessionsController < ApplicationController
   	end
   end
 
+  # DESTROY /log_out
   def destroy
   	session[:user_id] = nil
-  	redirect_to root_url, :notice => "Logged out!"
+  	redirect_to new_session_path, :notice => "Logged out!"
   end
 end
